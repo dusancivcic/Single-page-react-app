@@ -55,10 +55,10 @@ function NavBar() {
       </div>
       <div className='hamburger-popout'>
         <ul>
-            <li><NavLink activeClassName='activenav' to="/" exact>Home</NavLink></li>
-            <li><NavLink activeClassName='activenav' to="about" >About</NavLink></li>
-            <li><NavLink activeClassName='activenav' to="blog">Blog</NavLink></li>
-            <li><a href="#contact">Contact</a></li> 
+            <li><NavLink onClick={funkciju} activeClassName='activenav' to="/" exact>Home</NavLink></li>
+            <li><NavLink onClick={funkciju} activeClassName='activenav' to="about" >About</NavLink></li>
+            <li><NavLink onClick={funkciju} activeClassName='activenav' to="blog">Blog</NavLink></li>
+            <li><a href="#contact" onClick={funkciju}>Contact</a></li> 
         </ul>
       </div>
     </section>
