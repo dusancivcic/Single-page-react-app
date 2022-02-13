@@ -1,24 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
-
-body {
+body,
+html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
-  overscroll-behavior-y: none;
-  position: static;
-  height: 100%;
   background-color: #f8f8f8;
 }
+
+
 .news-card-container a{
   text-decoration: none;
   flex: 1;
@@ -29,10 +26,10 @@ body {
   background: linear-gradient( rgba(46, 46, 46, 0.6), rgba(46, 46, 46, 0.6) ), url('assets/images/header.jpg');
   background-repeat: no-repeat;
   background-size: cover;
- 
   min-height: 800px;
   display: flex;
   align-items: center;
+  position: relative;
   justify-content: center;
 }
 .header-container{
@@ -64,7 +61,7 @@ margin-bottom: 50px;
   gap: 10px;
   border: 1px solid #f8f8f8;
 }
-.header-buttons a:hover
+
 .header-buttons a div{
   background-color: #f8f8f8;
   height: 1px;
@@ -563,6 +560,9 @@ transform: rotate(-45deg) translate(52%,-15%);
       font-size: 30px;
       line-height: 30px;
     }
+    .techno-container img{
+      height: unset;
+    }
     .techno-section{
       padding: 70px 20px;
     }
@@ -679,6 +679,12 @@ transform: rotate(-45deg) translate(52%,-15%);
   .about-page-main-section{
     padding: 70px 20px;
   }
+  .about-container-card{
+    height: 200px;
+  }
+  .news-card-text{
+    height: 180px;
+  }
 }
 .mobile-nav-section{
   display: none;
@@ -688,15 +694,15 @@ transform: rotate(-45deg) translate(52%,-15%);
     display: none;
   }
   .mobile-nav-section{
-    position: relative;
+    position: fixed;
     display: block;
-    position: absolute;
     width: 100%;
+    z-index: 11;
   }
   .mobile-nav-container{
     padding: 30px 50px;
     display: flex;
-   
+   position: relative;
     justify-content: space-between;
   }
   .hamburger{
@@ -704,7 +710,7 @@ transform: rotate(-45deg) translate(52%,-15%);
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 11;
+    z-index: 31;
     justify-content: space-between;
   }
   .hamburger span{
@@ -723,14 +729,13 @@ transform: rotate(-45deg) translate(52%,-15%);
     right: -100%;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 30;
     transition: right 0.3s ease;
   }
   .hamburger-popout.active{
     right: 0px;
   }
   .mobile-nav-section.active{
-    position: fixed;
     background-color: #a5e145;
     z-index: 2;
   }

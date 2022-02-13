@@ -13,11 +13,6 @@ function App() {
 
   const [newsId, setNewsId] = useState({})
 
-  useEffect(() => {
-
-    
-    console.log(newsId)
-  }, [newsId])
 
   return (
     <>

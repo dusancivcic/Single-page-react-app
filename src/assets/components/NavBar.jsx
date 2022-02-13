@@ -19,9 +19,11 @@ function NavBar() {
     useEffect(() => {
         window.addEventListener("scroll", () => {
           setScroll2(window.scrollY > 20);
+          console.log('aaa')
         });
         window.addEventListener("scroll", () => {
           setScroll(window.scrollY > 50);
+          console.log('aaa')
         })
     }, [])
 

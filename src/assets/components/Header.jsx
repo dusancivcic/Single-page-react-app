@@ -22,10 +22,11 @@ function Header() {
                     Explore Here
                     <div></div>  
                   </a>
-                  <div className='playbutton-container'>
+                  <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
+                  <div className='playbutton-container' onClick={()=> setOpen(true)}>
                     <div className='playbutton-triangle pulse'></div>
-                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="L61p2uyiMSo" onClose={() => setOpen(false)} />
-                    <button className="btn-primary" onClick={()=> setOpen(true)}>Watch Video</button>
+                  
+                    <button className="btn-primary" >Watch Video</button>
                   </div>
               </div>
             </div>
