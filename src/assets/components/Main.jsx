@@ -12,7 +12,7 @@ function App(props) {
       <Header />
       <About />
       <Technologie/>
-      <News newsId={props.newsId} setNewsId={props.setNewsId}/>
+      <News threeNews={props.threeNews} />
     </>
   );
 }

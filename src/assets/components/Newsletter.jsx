@@ -6,13 +6,14 @@ import React, { useState } from "react";
 function Newsletter() {
 
   const [emailError, setEmailError] = useState('')
+
   const validateEmail = (e) => {
     var email = e.target.value
   
     if (validator.isEmail(email)) {
-      setEmailError('Valid Email :)')
+      setEmailError('Valid Email')
     } else {
-      setEmailError('Enter valid Email!')
+      setEmailError('Enter a valid Email!')
     }
   }
 

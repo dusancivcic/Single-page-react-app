@@ -23,7 +23,7 @@ const SingleNews = props =>{
   //   })
 
   useEffect(() => {
-    console.log(props.newsId)
+    console.log(props.el)
   }, [])
 
 
@@ -37,9 +37,9 @@ const SingleNews = props =>{
     
     <section className='about-page-main-section'>
       <div className='about-page-main-container'>
-        <img src={props.newsId.image} alt={props.newsId.title} />
-        <h2>{props.newsId.title}</h2>
-        <p>{props.newsId.desc}</p>
+        <img src={props.el.image} alt={props.el.title} />
+        <h2>{props.el.title}</h2>
+        <p>{props.el.desc}</p>
            
       </div>           
       </section>
